@@ -80,8 +80,19 @@ public class StatsService {
 
         int lowerMonth = 0; // номер месяца с максимальными продажами
 
+        int allSales = 0; // сумма продаж pа все месяцы
+
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < 15) {
+
+            allSales = allSales + sales[i];
+
+        }
+
+
+
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < allSales/12) {
                 lowerMonth = lowerMonth +1; // запомним его как максимальный
             }
 
@@ -98,8 +109,19 @@ public class StatsService {
 
         int upperMonth = 0; // номер месяца с максимальными продажами
 
+        int allSales = 0; // сумма продаж за все месяцы
+
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < 15) {
+
+            allSales = allSales + sales[i];
+
+        }
+
+
+
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > allSales/12) {
                 upperMonth = upperMonth +1; // запомним его как максимальный
             }
 
