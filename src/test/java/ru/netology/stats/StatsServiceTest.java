@@ -13,11 +13,11 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedSumSales = 180;
-        int actualSumSales = service.sumSales(sales);
+        long expectedSumSales = 180;
+        long actualSumSales = service.sumSales(sales);
 
         Assertions.assertEquals(expectedSumSales, actualSumSales);
     }
@@ -30,11 +30,11 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedSumSales = 15;
-        int actualSumSales = service.mediumOfAllSales(sales);
+        long expectedSumSales = 15;
+        long actualSumSales = service.mediumOfAllSales(sales);
 
         Assertions.assertEquals(expectedSumSales, actualSumSales);
     }
@@ -47,8 +47,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMinMonth = 8;
         int actualMinMonth = service.maxSales(sales);
@@ -64,8 +64,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMinMonth = 9;
         int actualMinMonth = service.minSales(sales);
@@ -81,8 +81,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedLowerMonth = 5;
         int actualLowerMonth = service.lowerMedium(sales);
@@ -98,8 +98,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedUpperMonth = 5;
         int actualUpperMonth = service.lowerMedium(sales);

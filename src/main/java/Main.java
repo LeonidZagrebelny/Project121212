@@ -4,22 +4,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] sales;
-        sales = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales;
+        sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         StatsService service = new StatsService();
 
-        int minMonth;
-        minMonth = service.minSales(sales);
-
-        int allSales;
+        long allSales;
         allSales = service.sumSales(sales);
 
-        int mediumSales;
+        long mediumSales;
         mediumSales = service.mediumOfAllSales(sales);
 
         int maxMonth;
         maxMonth = service.maxSales(sales);
+
+        int minMonth;
+        minMonth = service.minSales(sales);
 
         int lowerMonth;
         lowerMonth = service.lowerMedium(sales);
