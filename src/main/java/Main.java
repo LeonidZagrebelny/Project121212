@@ -13,7 +13,7 @@ public class Main {
         allSales = service.sumSales(sales);
 
         long mediumSales;
-        mediumSales = service.mediumOfAllSales(sales);
+        mediumSales = service.sumSales(sales) / 12;
 
         int maxMonth;
         maxMonth = service.maxSales(sales);

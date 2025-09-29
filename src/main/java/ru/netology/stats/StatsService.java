@@ -18,21 +18,6 @@ public class StatsService {
         return allSales;
     }
 
-    // Среднее количество продаж за 1 месяц
-    public long mediumOfAllSales(long[] sales) {
-
-
-        long allSales = 0; // сумма продаж pа все месяцы
-
-        for (int i = 0; i < sales.length; i++) {
-
-            allSales = allSales + sales[i];
-
-        }
-
-        return allSales / 12;
-    }
-
 
     // Максимум продаж за 1 месяц
     public int maxSales(long[] sales) {
@@ -74,19 +59,10 @@ public class StatsService {
     public int lowerMedium(long[] sales) {
 
 
-        int lowerMonth = 0; // номер месяца с максимальными продажами
-
-        long allSales = 0; // сумма продаж pа все месяцы
-
+        long medSales = sumSales(sales);
+        int lowerMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-
-            allSales = allSales + sales[i];
-
-        }
-
-
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < allSales / 12) {
+            if (sales[i] < medSales / 12) {
                 lowerMonth = lowerMonth + 1; // запомним его как максимальный
             }
 
@@ -100,20 +76,12 @@ public class StatsService {
     //Количества месяцев, в которых продажи были выше среднего
     public int upperMedium(long[] sales) {
 
-
+        long medSales = sumSales(sales);
         int upperMonth = 0; // номер месяца с максимальными продажами
 
-        long allSales = 0; // сумма продаж за все месяцы
 
         for (int i = 0; i < sales.length; i++) {
-
-            allSales = allSales + sales[i];
-
-        }
-
-
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > allSales / 12) {
+            if (sales[i] > medSales / 12) {
                 upperMonth = upperMonth + 1; // запомним его как максимальный
             }
 

@@ -34,7 +34,7 @@ public class StatsServiceTest {
         sales = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expectedSumSales = 15;
-        long actualSumSales = service.mediumOfAllSales(sales);
+        long actualSumSales = service.sumSales(sales) / 12;
 
         Assertions.assertEquals(expectedSumSales, actualSumSales);
     }
